@@ -1,6 +1,6 @@
 # vault-manager
 
-Repository for managing the **Dick's Vault** organization. This project serves as the central command center for automation, governance, and status reporting across all 260+ repositories.
+Repository for managing the **RPDevs Vault** organization. This project serves as the central command center for automation, governance, and status reporting across all 260+ repositories.
 
 ---
 
@@ -19,7 +19,7 @@ Repository for managing the **Dick's Vault** organization. This project serves a
 - **[Stale Fork Auditor](./.github/workflows/stale-fork-auditor.yml):** Weekly check for archived/deleted upstream repos.
 - **[Merged Branch Cleanup](./.github/workflows/cleanup-branches.yml):** Weekly removal of merged git branches.
 - **[Notification Streamliner](./.github/workflows/streamline-notifications.yml):** Daily noise reduction for GitHub notifications.
-- **[Organization Archive Engine](./.github/workflows/archive-engine.yml):** Weekly monorepo backup of all fork upstreams in IamRPDev and Dick-s-Vault.
+- **[Organization Archive Engine](./.github/workflows/archive-engine.yml):** Weekly monorepo backup of all fork upstreams in IamRPDev and RPDevs-Vault.
 - **[Organization Health Dashboard](./.github/workflows/health-dashboard.yml):** Weekly automated reporting on organization metrics and metadata health.
 
 ---
@@ -29,7 +29,7 @@ Repository for managing the **Dick's Vault** organization. This project serves a
 
 ## 📋 Management Tasks
 
-See [Issues](https://github.com/Dick-s-Vault/vault-manager/issues) for the active roadmap. Key initiatives:
+See [Issues](https://github.com/RPDevs-Vault/vault-manager/issues) for the active roadmap. Key initiatives:
 - [#1] Label Standardization
 - [#2] Stale Fork Auditing
 - [#4] Merged Branch Cleanup

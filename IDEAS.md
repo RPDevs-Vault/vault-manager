@@ -1,6 +1,6 @@
 # 💡 Management & Automation Ideas
 
-This file tracks advanced concepts and features to be implemented for the **Dick-s-Vault** organization.
+This file tracks advanced concepts and features to be implemented for the **RPDevs-Vault** organization.
 
 ## 🛡️ Security & Health
 - [x] **Org-wide Dependabot:** Enable security alerts and automated PRs across all 260+ repositories.

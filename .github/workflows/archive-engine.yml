@@ -13,7 +13,7 @@ jobs:
       - name: Checkout Archive Repository
         uses: actions/checkout@v4
         with:
-          repository: Dick-s-Vault/Archive
+          repository: RPDevs-Vault/Archive
           token: ${{ secrets.SYNC_TOKEN }}
           fetch-depth: 0
           path: archive
@@ -55,7 +55,7 @@ jobs:
             REPO_URL="https://github.com/$source_repo.git"
             
             # Skip if it's the archive itself
-            [[ "$source_repo" == "Dick-s-Vault/Archive" ]] && continue
+            [[ "$source_repo" == "RPDevs-Vault/Archive" ]] && continue
 
             SUCCESS=false
             ACTION=""
