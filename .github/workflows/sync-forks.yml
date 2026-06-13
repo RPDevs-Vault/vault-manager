@@ -21,3 +21,11 @@ jobs:
             echo "Syncing $repo..."
             gh repo sync "$repo" || echo "Failed to sync $repo"
           done
+
+      - name: Trigger Asset Discovery
+        env:
+          GH_TOKEN: ${{ secrets.SYNC_TOKEN }}
+        run: |
+          echo "Triggering Docker Collector in container-manager..."
+          gh workflow run docker-collector.yml --repo RPDevs-Vault/container-manager
+
