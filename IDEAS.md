@@ -15,7 +15,7 @@ This file tracks advanced concepts and features to be implemented for the **Dick
 ## ⚖️ Governance
 - [x] **Global Repository Rulesets:** Enforce branch protection (no force-pushes, no deletions) across all repositories using a single org-level rule.
 - [x] **License Auditing:** Automatically detect repositories missing a LICENSE file and inject a standard one.
-- [ ] **Archival Automator:** Automatically archive repositories where the upstream has been deleted or inactive for > 2 years.
+- [x] **Archival Automator:** Automatically archive repositories where the upstream has been deleted or inactive for > 2 years.
 
 ## 📊 Reporting
 - [x] **Organization Health Dashboard:** Create a GH Action that generates a markdown report of all "unhealthy" repos (missing labels, outdated, etc.).
