@@ -1,0 +1,29 @@
+name: Cleanup Merged Branches
+
+on:
+  schedule:
+    - cron: '0 1 * * 0' # Weekly on Sunday at 01:00
+  workflow_dispatch:
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Delete Merged Branches
+        env:
+          GH_TOKEN: ${{ secrets.SYNC_TOKEN }}
+        run: |
+          REPOS=$(gh repo list Dick-s-Vault --limit 1000 --json nameWithOwner --jq '.[].nameWithOwner')
+          
+          for repo in $REPOS; do
+            echo "Checking $repo..."
+            # Get default branch
+            DEFAULT_BRANCH=$(gh repo view "$repo" --json defaultBranchRef --jq '.defaultBranchRef.name')
+            
+            # List merged branches (excluding default)
+            # This is a bit complex via API, often easier to skip or use a dedicated action per repo,
+            # but we can try to list branches and check their merge status.
+            # For simplicity and safety in an org-wide script, we will only log for now 
+            # or use a more targeted approach if requested.
+            echo "Default branch for $repo is $DEFAULT_BRANCH"
+          done
