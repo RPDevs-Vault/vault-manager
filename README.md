@@ -19,6 +19,7 @@ Repository for managing the **Dick's Vault** organization. This project serves a
 - **[Stale Fork Auditor](./.github/workflows/stale-fork-auditor.yml):** Weekly check for archived/deleted upstream repos.
 - **[Merged Branch Cleanup](./.github/workflows/cleanup-branches.yml):** Weekly removal of merged git branches.
 - **[Notification Streamliner](./.github/workflows/streamline-notifications.yml):** Daily noise reduction for GitHub notifications.
+- **[Organization Archive Engine](./.github/workflows/archive-engine.yml):** Weekly monorepo backup of all fork upstreams in IamRPDev and Dick-s-Vault.
 
 ---
 
