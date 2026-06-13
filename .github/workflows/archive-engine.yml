@@ -43,8 +43,8 @@ jobs:
           # Gather forks from both sources
           echo "Scanning IamRPDev..."
           scan_forks "IamRPDev" "user" > forks_list.txt
-          echo "Scanning Dick-s-Vault..."
-          scan_forks "Dick-s-Vault" "organization" >> forks_list.txt
+          echo "Scanning RPDevs-Vault..."
+          scan_forks "RPDevs-Vault" "organization" >> forks_list.txt
 
           echo "### Archive Sync Report - $(date)" >> $GITHUB_STEP_SUMMARY
           echo "| Status | Repository | Source |" >> $GITHUB_STEP_SUMMARY

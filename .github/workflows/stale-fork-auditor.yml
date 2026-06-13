@@ -13,7 +13,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.SYNC_TOKEN }}
         run: |
-          REPOS=$(gh repo list Dick-s-Vault --limit 1000 --json nameWithOwner,isFork --jq '.[] | select(.isFork == true) | .nameWithOwner')
+          REPOS=$(gh repo list RPDevs-Vault --limit 1000 --json nameWithOwner,isFork --jq '.[] | select(.isFork == true) | .nameWithOwner')
           REPORT="stale_report.md"
           echo "## Stale Fork Audit Report - $(date)" > $REPORT
           echo "| Repository | Status | Upstream |" >> $REPORT
