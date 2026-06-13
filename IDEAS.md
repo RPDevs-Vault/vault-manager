@@ -4,7 +4,7 @@ This file tracks advanced concepts and features to be implemented for the **Dick
 
 ## 🛡️ Security & Health
 - [ ] **Org-wide Dependabot:** Enable security alerts and automated PRs across all 260+ repositories.
-- [ ] **Organization Health Repository:** Create a `.github` repository to host global templates (LICENSE, CONTRIBUTING, ISSUE_TEMPLATES).
+- [x] **Organization Health Repository:** Create a `.github` repository to host global templates (LICENSE, CONTRIBUTING, ISSUE_TEMPLATES).
 - [ ] **Secret Scanning:** Implement automated secret scanning across both accounts to prevent credential leaks.
 
 ## 🏗️ Infrastructure & Build
