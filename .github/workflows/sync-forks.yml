@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Sync Forks
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.SYNC_TOKEN || secrets.GITHUB_TOKEN }}
         run: |
           # Get all forked repositories in the organization
           REPOS=$(gh repo list Dick-s-Vault --limit 1000 --json nameWithOwner,isFork --jq '.[] | select(.isFork == true) | .nameWithOwner')
