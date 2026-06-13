@@ -13,7 +13,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.SYNC_TOKEN }}
         run: |
-          REPOS=$(gh repo list Dick-s-Vault --limit 1000 --json nameWithOwner --jq '.[].nameWithOwner')
+          REPOS=$(gh repo list --limit 1000 --limit 1000 --json nameWithOwner --jq '.[].nameWithOwner')
           
           for repo in $REPOS; do
             echo "Processing $repo..."

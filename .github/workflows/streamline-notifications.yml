@@ -15,7 +15,7 @@ jobs:
         run: |
           # 1. Clear notifications from outside Dick-s-Vault
           echo "Clearing outside notifications..."
-          gh api /notifications --paginate -q '.[] | select(.repository.owner.login != "Dick-s-Vault") | .id' > outside_ids.txt
+          gh api /notifications --paginate -q '.[] | select(.repository.owner.login != "Dick-s-Vault" and .repository.owner.login != "IamRPDev") | .id' > outside_ids.txt
           while read id; do
             gh api -X PATCH "/notifications/threads/$id" --silent
           done < outside_ids.txt
