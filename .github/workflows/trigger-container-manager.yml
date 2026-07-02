@@ -1,0 +1,20 @@
+name: Organization Dispatch Hub
+
+on:
+  schedule:
+    - cron: '0 0 * * 0' # Weekly trigger (Sunday midnight)
+  workflow_dispatch:
+
+jobs:
+  dispatch-container-builds:
+    name: Trigger Container Manager Collection
+    runs-on: ubuntu-latest
+    steps:
+      - name: Emit Repository Dispatch
+        env:
+          GH_TOKEN: ${{ secrets.SYNC_TOKEN }}
+        run: |
+          echo "Emitting repository_dispatch to RPDevs-Vault/container-manager..."
+          gh api -X POST /repos/RPDevs-Vault/container-manager/dispatches \
+            -f event_type='collect_docker_assets'
+          echo "Dispatch emitted successfully."
